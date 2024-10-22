@@ -16,8 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from . import views #importar la vista del proyecto
 
 urlpatterns = [
     path('admin/', admin.site.urls), #ruta para la administracion
-    path('blog/', include('blog.urls')), #incluir las urls de la aplicacion blog
+    path('blog/', include('blog.urls')), #indica la urls de la aplicacion blog
+    path('', views.index, name='index'), #indica la url del index del proyecto
+    path('galeria/', include('galeria.urls')) #indica la url de la app galería
 ]

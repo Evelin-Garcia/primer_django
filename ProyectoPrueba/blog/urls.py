@@ -1,6 +1,8 @@
 from django.urls import path
 from . import views #importamos las vistas de la aplicacion
 
+app_name='blog' #namespace de la aplicacion blog
+
 urlpatterns = [
-    path('', views.home, name='home'), #Definir la ruta principal de la aplicacion blog
+    path('', views.index, name='index'),#Define la ruta/página principal de la aplicacion blog
 ]
