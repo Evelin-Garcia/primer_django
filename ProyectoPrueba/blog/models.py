@@ -7,5 +7,5 @@ class Articulo(models.Model):
     contenido = models.TextField()
     fecha_publicacion = models.DateTimeField(auto_now_add=True)
     
-    def __str__(self):
-        return self.titulo
+    def __str__(self):  
+        return self.titulo  #se autoreferencia, va a mostrar a si mismo.

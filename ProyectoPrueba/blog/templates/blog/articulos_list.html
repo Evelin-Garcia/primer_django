@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Articulos</title>
+</head>
+<body>
+    <h1>Artículos del Blog</h1>
+
+    <ul>
+        {% for articulo in articulos %} <!--se representa una variable asignada con los articulos definidos en la view mediante un bucle for-->
+            <li>{{articulo.titulo}} : {{articulo.contenido}}</li><!--las llaves y porcentajes son propios del lenguaje de plantillas de django-->
+        {% empty %}<!--Si la lista está vacia mostrará el mensaje sgte y cierra con endfor-->
+            <li>No hay articulos disponibles</li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
